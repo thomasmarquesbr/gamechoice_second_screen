@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Games LabMidDig</string>
+    <string name="puzzle">Quebra-cabeça</string>
+    <string name="word_search">Caça palavras</string>
+</resources>
