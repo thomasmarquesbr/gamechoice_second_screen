@@ -4,6 +4,7 @@ import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Process
 import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
@@ -85,7 +86,7 @@ class MainActivity :
             val message = which.toString()
             Log.e("MESSAGE", message)
             multicastGroup.sendMessage(false, message)
-            this@MainActivity.finish()
+            finishAndRemoveTask()
         }
         builder.setTitle("Qual é a sua idade?")
         builder.setCancelable(false)
