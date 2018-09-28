@@ -49,6 +49,8 @@ class MainActivity :
             book = jsonObject.getString("book")
             level = jsonObject.getInt("level")
             word = jsonObject.getInt("word")
+        } ?: run {
+            level = 0
         }
     }
 
