@@ -99,7 +99,7 @@ class MainActivity :
                 title_1.setText(R.string.puzzle)
                 title_2.setText(R.string.word_search)
                 with(image_button_1) {
-                    setImageResource(R.mipmap.puzzle)
+                    setImageResource(R.mipmap.anagram)
                     tag = Game.ANAGRAM
                 }
                 with(image_button_2) {
@@ -111,7 +111,7 @@ class MainActivity :
                 title_1.setText(R.string.puzzle)
                 title_2.setText(R.string.puzzle)
                 with(image_button_1) {
-                    setImageResource(R.mipmap.puzzle)
+                    setImageResource(R.mipmap.anagram)
                     tag = Game.ANAGRAM
                 }
                 with(image_button_2) {
