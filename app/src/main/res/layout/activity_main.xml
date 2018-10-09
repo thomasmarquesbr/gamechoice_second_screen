@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.lmd.thomas.gamechoice.MainActivity"
+    tools:context="com.lmd.thomas.gamechoice.ui.main.MainActivity"
     android:orientation="vertical"
     android:weightSum="2">
 
@@ -22,7 +22,7 @@
         android:id="@+id/image_button_1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/puzzle"
+        app:srcCompat="@mipmap/puzzle"
         android:background="@drawable/riple_primary"
         android:onClick="onClickButton"
         android:layout_weight="1"/>
@@ -41,7 +41,7 @@
         android:id="@+id/image_button_2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@mipmap/wordsearch"
+        app:srcCompat="@mipmap/wordsearch"
         android:background="@drawable/riple_primary_dark"
         android:onClick="onClickButton"
         android:layout_weight="1"/>

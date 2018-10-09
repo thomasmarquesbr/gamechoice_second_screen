@@ -2,4 +2,20 @@
     <string name="app_name">Games LabMidDig</string>
     <string name="puzzle">Quebra-cabeça</string>
     <string name="word_search">Caça palavras</string>
+
+    <string name = "app_id"> 27965296756 </string>
+    <string name="center">Centro</string>
+    <string name="match">Acertou</string>
+
+    <string-array name="level_codes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="level_images">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+    </string-array>
 </resources>

@@ -1,15 +1,16 @@
-package com.lmd.thomas.gamechoice
+package com.lmd.thomas.gamechoice.ui.main
 
 import android.content.Intent
 import android.net.Uri
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Process
 import android.support.v7.app.AlertDialog
 import android.util.Log
 import android.view.View
 import android.view.WindowManager
+import com.lmd.thomas.gamechoice.R
 import com.lmd.thomas.gamechoice.multicast.MulticastGroup
+import com.lmd.thomas.gamechoice.ui.wordsearch.gameplay.WordSearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
 
@@ -56,9 +57,18 @@ class MainActivity :
     }
 
     fun onClickButton(view: View) {
+        val jsonObject = JSONObject()
+        jsonObject.put("book", book)
+        jsonObject.put("level", level)
+        jsonObject.put("word", 0)
+        var intent: Intent
         when (view.tag as Game) {
             Game.ANAGRAM -> openAnotherApp("com.lmd.thomas.anagram")
-            Game.WORDSEARCH -> openAnotherApp("com.lapic.thomas.wordsearch")
+            Game.WORDSEARCH -> {
+                intent = Intent(this, WordSearchActivity::class.java)
+                intent.putExtra("params", jsonObject.toString())
+                startActivity(intent)
+            }
             Game.PUZZLE -> openAnotherApp("com.lmd.thomas.puzzle")
         }
     }
