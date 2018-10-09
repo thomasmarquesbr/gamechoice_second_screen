@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.wordsearch.gameplay.WordSearchActivity">
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llTop"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+    </LinearLayout>
+
+    <com.lmd.thomas.gamechoice.ui.wordsearch.gameplay.WordSearchViewPager xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:layout_below="@+id/llTop" />
+
+    <com.scalified.fab.ActionButton
+        android:id="@+id/action_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/fab_margin"
+        android:visibility="invisible"
+        android:onClick="onClickNextButton"
+        app:type="BIG"
+        app:hide_animation="@anim/fab_scale_down"
+        app:show_animation="@anim/fab_scale_up"
+        app:button_color="@color/colorAccent"
+        app:button_colorPressed="@color/colorAccent_900"
+        app:rippleEffect_enabled="true"
+        app:image="@drawable/right_arrow"
+        app:image_size="40dp"
+        />
+
+</RelativeLayout>

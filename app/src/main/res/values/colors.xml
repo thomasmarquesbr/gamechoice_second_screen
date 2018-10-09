@@ -5,4 +5,15 @@
     <color name="colorPrimaryDark">#C8E6C9</color>
     <color name="colorPrimaryDarkPressed">#A5D6A7</color>
     <color name="colorAccent">#FF4081</color>
+
+    <color name="blue">#00A2EA</color>
+    <color name="green">#1ACA85</color>
+    <!--<color name="green">#10EC92</color>-->
+    <color name="purple">#8B77CC</color>
+    <color name="red">#F22442</color>
+
+    <color name="colorAccent_900">#B71C1C</color>
+    <color name="textColor">#757575</color>
+    <color name="whiteTransparent">#80FFFFFF</color>
+    <color name="alphaBlack">#BF000000</color>
 </resources>

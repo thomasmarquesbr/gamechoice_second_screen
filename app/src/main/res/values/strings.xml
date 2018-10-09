@@ -2,4 +2,70 @@
     <string name="app_name">Games LabMidDig</string>
     <string name="puzzle">Quebra-cabeça</string>
     <string name="word_search">Caça palavras</string>
+
+        
+    <string name="app_id"> 27965296756 </string>
+    <string name="center">Centro</string>
+    <string name="match">Acertou</string>
+
+    <string-array name="level_codes">
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+    </string-array>
+
+    <string-array name="level_images">
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+        <item>@mipmap/ic_launcher</item>
+    </string-array>
+
+    <string-array name="level1_artista">
+        <item>gato</item>
+        <item>vaca</item>
+        <item>bode</item>
+        <item>vaga-lume</item>
+    </string-array>
+
+    <string-array name="level2_artista">
+        <item>lápis</item>
+        <item>besouro</item>
+        <item>caracol</item>
+        <item>galinha</item>
+    </string-array>
+
+    <string-array name="level3_artista">
+        <item>joaninha</item>
+        <item>zebra</item>
+        <item>lagarta</item>
+        <item>pincel</item>
+    </string-array>
+
+    <string-array name="level1_barco">
+        <item>índio</item>
+        <item>jacaré</item>
+        <item>mata</item>
+        <item>rio</item>
+    </string-array>
+
+    <string-array name="level2_barco">
+        <item>barco</item>
+        <item>mar</item>
+        <item>onça</item>
+        <item>peixes</item>
+    </string-array>
+
+    <string-array name="level3_barco">
+        <item>montanhas</item>
+        <item>pássaro</item>
+        <item>tartaruga</item>
+    </string-array>
+
+    <string name="success">Sucesso</string>
+    <string name="next">Próximo</string>
+    <string name="restart">Reiniciar</string>
+    <string name="ok">OK</string>
+    <string name="exit">Sair</string>
+    <string name="complete">Concluído</string>
+    <string name="tips">Tips</string>
 </resources>
