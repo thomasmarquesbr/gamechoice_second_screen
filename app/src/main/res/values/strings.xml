@@ -3,7 +3,8 @@
     <string name="puzzle">Quebra-cabeça</string>
     <string name="word_search">Caça palavras</string>
 
-    <string name = "app_id"> 27965296756 </string>
+        
+    <string name="app_id"> 27965296756 </string>
     <string name="center">Centro</string>
     <string name="match">Acertou</string>
 
@@ -17,5 +18,46 @@
         <item>@mipmap/ic_launcher</item>
         <item>@mipmap/ic_launcher</item>
         <item>@mipmap/ic_launcher</item>
+    </string-array>
+
+    <string-array name="level1_artista">
+        <item>gato</item>
+        <item>vaca</item>
+        <item>bode</item>
+        <item>vaga-lume</item>
+    </string-array>
+
+    <string-array name="level2_artista">
+        <item>lápis</item>
+        <item>besouro</item>
+        <item>caracol</item>
+        <item>galinha</item>
+    </string-array>
+
+    <string-array name="level3_artista">
+        <item>joaninha</item>
+        <item>zebra</item>
+        <item>lagarta</item>
+        <item>pincel</item>
+    </string-array>
+
+    <string-array name="level1_barco">
+        <item>índio</item>
+        <item>jacaré</item>
+        <item>mata</item>
+        <item>rio</item>
+    </string-array>
+
+    <string-array name="level2_barco">
+        <item>barco</item>
+        <item>mar</item>
+        <item>onáa</item>
+        <item>peixes</item>
+    </string-array>
+
+    <string-array name="level3_barco">
+        <item>montanhas</item>
+        <item>pássaro</item>
+        <item>tartaruga</item>
     </string-array>
 </resources>

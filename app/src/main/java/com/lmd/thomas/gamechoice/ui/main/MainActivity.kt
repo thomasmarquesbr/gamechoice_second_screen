@@ -10,6 +10,7 @@ import android.view.View
 import android.view.WindowManager
 import com.lmd.thomas.gamechoice.R
 import com.lmd.thomas.gamechoice.multicast.MulticastGroup
+import com.lmd.thomas.gamechoice.ui.anagram.AnagramActivity
 import com.lmd.thomas.gamechoice.ui.wordsearch.gameplay.WordSearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
@@ -46,11 +47,15 @@ class MainActivity :
     }
 
     private fun parseIntent() {
-        intent.extras?.let {
-            val jsonObject = JSONObject(it.getString("params"))
-            book = jsonObject.getString("book")
-            level = jsonObject.getInt("level")
-            word = jsonObject.getInt("word")
+        intent.extras?.let {bundle ->
+            bundle.getString("params")?.let {
+                val jsonObject = JSONObject(it)
+                book = jsonObject.getString("book")
+                level = jsonObject.getInt("level")
+                word = jsonObject.getInt("word")
+            } ?: run {
+                level = 0
+            }
         } ?: run {
             level = 0
         }
@@ -63,7 +68,11 @@ class MainActivity :
         jsonObject.put("word", 0)
         var intent: Intent
         when (view.tag as Game) {
-            Game.ANAGRAM -> openAnotherApp("com.lmd.thomas.anagram")
+            Game.ANAGRAM -> {
+                intent = Intent(this, AnagramActivity::class.java)
+                intent.putExtra("params", jsonObject.toString())
+                startActivity(intent)
+            }
             Game.WORDSEARCH -> {
                 intent = Intent(this, WordSearchActivity::class.java)
                 intent.putExtra("params", jsonObject.toString())

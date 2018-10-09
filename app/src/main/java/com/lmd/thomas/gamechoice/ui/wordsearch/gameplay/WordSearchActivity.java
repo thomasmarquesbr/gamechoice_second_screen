@@ -51,6 +51,9 @@ public class WordSearchActivity
         }
     }
 
+    @Override
+    public void onBackPressed() { }
+
     private void configViews() {
         WordSearchManager wsm = WordSearchManager.getInstance();
         wsm.Initialize(Words.get(book)[gameDificulty][wordId]);
