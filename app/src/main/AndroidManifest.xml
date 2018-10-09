@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".ui.wordsearch.gameplay.WordSearchActivity" />
         <activity android:name=".ui.anagram.AnagramActivity" />
+        <activity android:name=".ui.puzzle.PuzzleActivity"></activity>
     </application>
 
 </manifest>

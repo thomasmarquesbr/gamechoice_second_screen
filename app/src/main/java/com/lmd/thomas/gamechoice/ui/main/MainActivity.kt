@@ -11,6 +11,7 @@ import android.view.WindowManager
 import com.lmd.thomas.gamechoice.R
 import com.lmd.thomas.gamechoice.multicast.MulticastGroup
 import com.lmd.thomas.gamechoice.ui.anagram.AnagramActivity
+import com.lmd.thomas.gamechoice.ui.puzzle.PuzzleActivity
 import com.lmd.thomas.gamechoice.ui.wordsearch.gameplay.WordSearchActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import org.json.JSONObject
@@ -78,7 +79,12 @@ class MainActivity :
                 intent.putExtra("params", jsonObject.toString())
                 startActivity(intent)
             }
-            Game.PUZZLE -> openAnotherApp("com.lmd.thomas.puzzle")
+            Game.PUZZLE -> {
+//                openAnotherApp("com.lmd.thomas.puzzle")
+                intent = Intent(this, PuzzleActivity::class.java)
+                intent.putExtra("params", jsonObject.toString())
+                startActivity(intent)
+            }
         }
     }
 

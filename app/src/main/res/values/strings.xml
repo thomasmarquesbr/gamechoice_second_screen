@@ -51,7 +51,7 @@
     <string-array name="level2_barco">
         <item>barco</item>
         <item>mar</item>
-        <item>onáa</item>
+        <item>onça</item>
         <item>peixes</item>
     </string-array>
 
@@ -60,4 +60,12 @@
         <item>pássaro</item>
         <item>tartaruga</item>
     </string-array>
+
+    <string name="success">Sucesso</string>
+    <string name="next">Próximo</string>
+    <string name="restart">Reiniciar</string>
+    <string name="ok">OK</string>
+    <string name="exit">Sair</string>
+    <string name="complete">Concluído</string>
+    <string name="tips">Tips</string>
 </resources>

@@ -3,13 +3,11 @@ package com.lmd.thomas.gamechoice.ui.anagram
 import android.content.Intent
 import android.graphics.Color
 import android.graphics.Point
-import android.net.Uri
 import android.os.Build
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.support.annotation.RequiresApi
 import android.support.v4.content.ContextCompat
-import android.util.Log
 import android.view.DragEvent
 import android.view.MotionEvent
 import android.view.View
@@ -20,6 +18,7 @@ import android.widget.RelativeLayout
 import com.amulyakhare.textdrawable.TextDrawable
 import com.lmd.thomas.gamechoice.R
 import com.lmd.thomas.gamechoice.extension.shuffleString
+import com.lmd.thomas.gamechoice.ui.puzzle.PuzzleActivity
 import com.lmd.thomas.gamechoice.ui.wordsearch.gameplay.WordSearchActivity
 import kotlinx.android.synthetic.main.activity_anagram.*
 import org.json.JSONObject
@@ -63,7 +62,7 @@ class AnagramActivity : AppCompatActivity() {
             arrayOf(
                     intArrayOf(R.drawable.barco, R.drawable.barco_1, R.drawable.barco_2, R.drawable.barco_3, R.drawable.barco_4, R.drawable.barco_5),
                     intArrayOf(R.drawable.mar, R.drawable.mar_1, R.drawable.mar_2, R.drawable.mar_3),
-                    intArrayOf(R.drawable.onaa, R.drawable.onaa_1, R.drawable.onaa_2, R.drawable.onaa_3, R.drawable.onaa_4),
+                    intArrayOf(R.drawable.onca, R.drawable.onca_1, R.drawable.onca_2, R.drawable.onca_3, R.drawable.onca_4),
                     intArrayOf(R.drawable.peixes, R.drawable.peixes_1, R.drawable.peixes_2, R.drawable.peixes_3, R.drawable.peixes_4, R.drawable.peixes_5, R.drawable.peixes_6)),
             arrayOf(
                     intArrayOf(R.drawable.montanhas, R.drawable.montanhas_1, R.drawable.montanhas_2, R.drawable.montanhas_3, R.drawable.montanhas_4, R.drawable.montanhas_5, R.drawable.montanhas_6, R.drawable.montanhas_7, R.drawable.montanhas_8, R.drawable.montanhas_9),
@@ -176,12 +175,10 @@ class AnagramActivity : AppCompatActivity() {
             jsonObject.put("book", book)
             jsonObject.put("level", level)
             jsonObject.put("word", wordId)
-            if (book == "o_barco") {
-//                openAnotherApp("com.lmd.thomas.puzzle")
+            if (book == "o_barco")
                 callPuzzleActivity(jsonObject)
-            } else
+            else
                 callWordSearchActivity(jsonObject)
-//                openAnotherApp("com.lapic.thomas.wordsearch")
         } else {
             val intent = Intent(this, AnagramActivity::class.java)
             val jsonObject = JSONObject()
@@ -194,7 +191,9 @@ class AnagramActivity : AppCompatActivity() {
     }
 
     private fun callPuzzleActivity(jsonObject: JSONObject) {
-//        val intent = Intent(this, Puzzl)
+        val intent = Intent(this, PuzzleActivity::class.java)
+        intent.putExtra("params", jsonObject.toString())
+        startActivity(intent)
     }
 
     private fun callWordSearchActivity(jsonObject: JSONObject) {
