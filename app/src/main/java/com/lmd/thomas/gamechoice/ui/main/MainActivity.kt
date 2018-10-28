@@ -30,7 +30,7 @@ class MainActivity :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+//        setContentView(R.layout.activity_main)
         window.setFlags(
                 WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN)
         startMulticastGroup()
@@ -54,11 +54,14 @@ class MainActivity :
                 book = jsonObject.getString("book")
                 level = jsonObject.getInt("level")
                 word = jsonObject.getInt("word")
+                Log.e("teste", "1- book: $book     level: $level       word: $word")
             } ?: run {
                 level = 0
+                Log.e("teste", "2- book: $book     level: $level       word: $word")
             }
         } ?: run {
             level = 0
+            Log.e("teste", "3- book: $book     level: $level       word: $word")
         }
     }
 
@@ -112,6 +115,7 @@ class MainActivity :
             Log.e("MESSAGE", message)
             multicastGroup.sendMessage(false, message)
             finishAndRemoveTask()
+            finishAffinity()
         }
         builder.setTitle("Qual é a sua idade?")
         builder.setCancelable(false)
